@@ -1,0 +1,53 @@
+/* 
+    Document   : loginOverride
+    Created on : Nov 17, 2013, 11:01:01 AM
+    Author     : ray
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.login .logo {
+    margin-top: 0;
+}
+
+.p1{
+    top:233px;
+}
+
+.p2{
+    top:90px;
+}
+
+.feeds .col1 .cont .cont-col2 .desc {
+    padding-top: 0;
+}
+
+.feeds .col1 .cont .cont-col1 .label {
+    display: inline;
+}
+
+.login .copyright{
+    color: #701584;
+    font-weight: bold;
+    font-size: 14px;
+    float:left;
+}
+
+.login{
+    overflow-x: hidden;
+}
+
+.desc a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.desc a:hover{
+    text-decoration: none;
+    color: blue;
+}

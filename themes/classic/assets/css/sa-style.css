@@ -1,0 +1,66 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 9, 2017, 11:07:06 PM
+    Author     : Samer
+*/
+.sa-table{
+    //margin: 1px;
+    border-bottom: 1px;
+  
+}
+.sa-picture{
+    border:  1px solid #e5e5e5 ;
+    height: 100px;  
+    width: 100px;
+}
+.sa-input{
+    
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    //border-right: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    // width:50%;
+     
+}
+.sa-btn{
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Segoe UI", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    color: #333333;
+    background-color: #e5e5e5;
+    border: 1px solid #000000;
+    //border-right: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    //box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    display: block;
+}
+.sa-large {
+
+    width:220px;
+
+}
+
+.sa-fill {
+
+    width:100%;
+
+}

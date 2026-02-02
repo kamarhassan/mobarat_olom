@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9393ec1e-ca11-4958-86d4-706f6dbc7bba" name="mobarat" url="http://mobarat@mobarat.nasr.org.lb">
+        <fileTransfer accessType="FTPS" host="mobarat@mobarat.nasr.org.lb" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

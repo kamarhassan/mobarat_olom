@@ -1,0 +1,53 @@
+/* 
+    Document   : dashboardcolors
+    Created on : Nov 17, 2013, 4:00:33 PM
+    Author     : ray
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.dashboard-stat.bordo {
+background-color: #c94545;
+}
+.dashboard-stat.bordo .more{
+    background-color: #840909;
+}
+
+.dashboard-stat.orange{
+background-color: #f3802b;
+}
+.dashboard-stat.orange .more{
+    background-color: #d35b02;
+}
+
+.dashboard-stat .details .number {
+    font-size: 32px;
+}
+
+.footer .footer-inner {
+color: #ffffff;
+font-size: 13px;
+font-weight: bold;
+}
+
+.portlet.box.orange{
+    background-color: #f3802b;
+    border: 1px solid #f3802b;
+}
+
+
+
+h2{
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #808080;
+}
+
+h1{
+    font-size: 3px;
+    
+}

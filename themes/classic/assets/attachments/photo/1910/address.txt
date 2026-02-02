@@ -1,0 +1,83 @@
+http://localhost:8088/moubarat02082015/index.php/MbAdmin/reportOldSchool
+http://localhost:8088/moubarat02082015/index.php/MbAdmin/index
+1204005
+141116
+
+
+public function actionIndex() {
+    	echo "<script>
+                alert(\"1\")
+               
+                </script>";
+        $model = new MbMessage;
+echo "<script>
+                alert(\"2\")
+               
+                </script>";
+        $array = array(
+            array(
+                'id' => 0,
+                'to' => 'ﬂ· «·√”« –… «·„”ƒÊ·Ì‰ ⁄‰ «·„œ«—”'
+            ),
+            array(
+                'id' => 1,
+                'to' => '«·√”« –… «·„‘—›Ì‰ ⁄·Ï «·„‘«—Ì⁄'
+            ),
+            array(
+                'id' => 2,
+                'to' => 'ﬂ· «·ÿ·«» «·„‘«—ﬂÌ‰'),
+            array(
+                'id' => 3,
+                'to' => 'ﬂ· «·√⁄÷«¡')
+        );
+		echo "<script>
+                alert(\"3\")
+               
+                </script>";
+        $list = CHtml::listData($array, 'id', 'to');
+        $dataProvider = new CActiveDataProvider('MbAdmin');
+echo "<script>
+                alert(\"4\")
+               
+                </script>";
+        if (isset($_POST['MbMessage'])) {
+            $model->attributes = $_POST['MbMessage'];
+            $model->message_date = new CDbExpression('NOW()');
+            if ($model->to == 0) {
+                $destination = MbUser::model()->findAll('user_type=2');
+            } else
+            if ($model->to == 1) {
+                $destination = MbUser::model()->findAll('user_type=4');
+            } else
+            if ($model->to == 2) {
+                $destination = MbUser::model()->findAll('user_type=3');
+            } else
+            if ($model->to == 3) {
+                $destination = MbUser::model()->findAll('user_type!=1');
+            }
+            if ($model->save()) {
+                foreach ($destination as $r) {
+                    $detail = new MbMessageDetail;
+                    $detail->mdetail_message = $model->message_id;
+                    $detail->mdetail_receiver = $r->user_id;
+                    $detail->mdetail_sender = Yii::app()->user->id;
+                    $detail->message_read_flag = 0;
+
+                    $detail->save(false);
+                }
+                echo "<script>
+                alert(\"·ﬁœ  „ ≈—”«· «·—”«·… »‰Ã«Õ\")
+                window.location='../MbAdmin/index'
+                </script>";
+            }
+        }
+echo "<script>
+                alert(\"5\")
+               
+                </script>";
+        $this->render('index', array(
+            'dataProvider' => $dataProvider,
+            'model' => $model,
+            'list' => $list
+        ));
+    }

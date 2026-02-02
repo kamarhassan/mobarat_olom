@@ -1,0 +1,36 @@
+/*
+    Document   : update
+    Created on : 26/11/2013, 11:30:44 م
+    Author     : Hassan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+@font-face{
+    font-family: 'moubarat';
+    src:url('../fonts/Segoe UI Semibold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    font-family: moubarat;
+}
+
+.radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
+    float: none;
+    margin-right: 0px;
+}
+
+root {
+    display: block;
+}
+
+.page-sidebar-menu > li > ul.sub-menu > li > a {
+    padding-right: 10px !important;
+}
+
+.dashboard-stat .details .number {
+    font-size: 24px;
+}
+
