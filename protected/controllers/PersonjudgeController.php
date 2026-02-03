@@ -429,7 +429,7 @@ class PersonjudgeController extends Controller
                             //while($query->pdoStatement->nextRowSet());
                             $query->pdoStatement->closeCursor();
                         }
-                        // حساب النتيجة النهائية بعد حفظ العلامات مباشرة
+                    //    this line added to solve judge Makrs // حساب النتيجة النهائية بعد حفظ العلامات مباشرة
                         Project::model()->calculateGrade($prjs[0]['project_id']);
                         $this->redirect(array('Personjudge/Judgeproject/' . $id));
                     }
