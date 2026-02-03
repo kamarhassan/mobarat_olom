@@ -45,8 +45,12 @@
                                 <th style="width: 125px;">الفئة</th>
                                 <th style="width: 50px;" align="center" >المرحلة</th>
                                 <th style="width: 50px;" align="center">عدد الحكام المسجلين</th>
-                                <!-- <th style="width: 50px;" align="center">عدد الحكام النواة المسجلين</th> -->
+                              
+                                <!-- Disable الحكام النواة -->
+                                <!-- <th style="width: 50px;" align="center">عدد الحكام النواة المسجلين</th> --> 
                                 <th style="width: 50px;" align="center">عدد الحكام المحكمين</th>
+                                
+                                  <!-- Disable الحكام النواة -->
                                 <!-- <th style="width: 50px;" align="center">عدد الحكام النواة المحكمين</th> -->
                                
                                 <th style="width: 50px;">العلامة النهائية</th>
@@ -95,8 +99,12 @@
                                     <td><?php echo $p['project_type_name']; ?></td>
                                     <td align="center"><?php echo $p['project_stage_name']; ?></td>
                                     <td align="center"><?php echo $p['register_judge']; ?></td>
+
+                                     <!-- Disable الحكام النواة -->
                                     <!-- <td align="center"><?php echo $p['register_judgeKernel']; ?></td> -->
                                     <td align="center"><?php echo $p['total_judge']; ?></td>
+                                    
+                                     <!-- Disable الحكام النواة -->
                                     <!-- <td align="center"><?php echo $p['total_judgekernel']; ?></td> -->
                                     <td align="center"><?php echo round($p['total_grade'],2); ?></td>
                                     <td align="center"><?php echo round($p['total_grade_coef'],2); ?></td>
