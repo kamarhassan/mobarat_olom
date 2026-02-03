@@ -848,24 +848,24 @@ ifnull((select  (select code_name from codes where code_kind =121 and code_no=po
             $where .= " and project.project_id in (select project_id from project_judge where project_judge.judge_id=".$_POST['judge_id'].") ";
         }
         $from=" from project  inner join school on school.school_id=project.school_id "
-                . " inner join mobarat_school on mobarat_school.school_id=project.school_id and mobarat_school.mobarat_year=project.mobarat_year and presence_assurance=1 ";
+                . " inner join mobarat_school on mobarat_school.school_id=project.school_id and mobarat_school.mobarat_year=project.mobarat_year and presence_assurance=1 "
+                . " left join person_judge pjg on pjg.judge_id=".$_POST['judge_id']." and pjg.mobarat_year=project.mobarat_year ";
         
         $countQuery="select count(project.project_id) ".$from. $where;
         
         $from .=" left join project_judge on project_judge.project_id=project.project_id and (rated=1 or judgeislogin=1)";
         //$count=Yii::app()->getDB()->createCommand($countQuery)->queryScalar();
         
-        $query="select project.project_id,school.school_id,school_name,project_name
+        $query="select project.project_id,school.school_id,school_name,project_name,project.project_type as project_type_code
                 ,(select code_name from codes where code_kind=111 and code_no=project_type) as project_type
                 ,(select code_name from codes where code_kind=106 and code_no=project_stage) as project_stage
                 ,(select code_name from codes where code_kind=120 and code_no=halls) as halls ,suite
                 ,count(project_judge.project_id) as judcount
                 ,(select count(project_judge.project_id) from project_judge 
-                   where project_judge.judge_id=".$_POST['judge_id']." and project_judge.project_id=project.project_id) as checked ".
-                           $from. $where
-                .'group by  project.project_id,school.school_id,school_name,project_name,project_type,project_stage'
-                //.' order by project.project_id';
-                 .' order by date_day,project_type,judcount asc';
+                   where project_judge.judge_id=".$_POST['judge_id']." and project_judge.project_id=project.project_id) as checked "
+                .$from. $where
+                .' group by  project.project_id,school.school_id,school_name,project_name,project.project_type,project_stage'
+                .' order by (case when project.project_type=pjg.judge_speciality1 or project.project_type=pjg.judge_speciality2 then 0 else 1 end), project.project_type, school_name, project_name asc';
      // echo $query;return;
         if($_POST['showall']=='true')
            $limit='all';// ( isset( $_POST['limit'] ) ) ? $_POST['limit'] : 15;
