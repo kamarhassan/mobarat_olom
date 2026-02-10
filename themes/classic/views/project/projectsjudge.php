@@ -60,6 +60,35 @@
             <td width="150" >
                  <?php echo CHtml::textField('txtPname','',array('id'=>'txtPname','class' => 'form-control ')); ?>
             </td>
+
+            <td width="75" style="text-align:center">
+                 <?php echo CHtml::label('الفئة',FALSE); ?>
+            </td>
+            <td width="150">
+                 <?php 
+                    $categories = Yii::app()->db->createCommand('SELECT code_no, code_name FROM codes WHERE code_kind=111 AND code_no IN ("01","02","03","04","05","06") ORDER BY code_no')->queryAll();
+                    $categoryList = array('' => 'اختر الفئة');
+                    foreach($categories as $cat){
+                        $categoryList[$cat['code_no']] = $cat['code_name'];
+                    }
+                    echo CHtml::dropDownList('category', '', $categoryList, array('id'=>'category','class' => 'form-control')); 
+                 ?>
+            </td>
+
+            <td width="75" style="text-align:center">
+                 <?php echo CHtml::label('المرحلة',FALSE); ?>
+            </td>
+            <td width="150" >
+                 <?php 
+                    $stages = Yii::app()->db->createCommand('SELECT code_no, code_name FROM codes WHERE code_kind=106 ORDER BY code_no')->queryAll();
+                    $stageList = array('' => 'اختر المرحلة');
+                    foreach($stages as $stg){
+                        $stageList[$stg['code_no']] = $stg['code_name'];
+                    }
+                    echo CHtml::dropDownList('stage', '', $stageList, array('id'=>'stage','class' => 'form-control')); 
+                 ?>
+            </td>
+
             <td width="75" style="text-align:center">
                  <?php echo CHtml::label('إظهار مشاريع الحكم فقط',FALSE); ?>
             </td>
@@ -79,6 +108,8 @@
                         $param=array();
                     $param['pname']="js:document.getElementById('txtPname').value ";
                     $param['school']="js:document.getElementById('txtSchool').value ";
+                    $param['category']="js:document.getElementById('category').value ";
+                    $param['stage']="js:document.getElementById('stage').value ";
                     $param['showRegister']="js:document.getElementById('chShowRegister').checked";
                     $param['showall']="js:document.getElementById('chShowAll').checked";
                     echo CHtml::button('search', array('id'=>'btsearch','name'=>'btsearch','class' => 'form-control', 'width' => 110,'Empty'=>'',

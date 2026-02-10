@@ -244,3 +244,88 @@ in C:\xampp\htdocs\mobarat\index.php (27)
 2026/01/28 08:50:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'favicon.ico' in 'where clause'. The SQL statement executed was: SELECT project_judge_id,project_id,judge_id,judge_personId,grade FROM project_judge  where project_judge_id=favicon.ico.
 in C:\xampp\htdocs\mobarat\protected\controllers\PersonjudgeController.php (321)
 in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 08:08:58 [error] [php] Undefined index: category (C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php:841)
+Stack trace:
+#0 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#1 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilterChain.php(130): ProjectFilter->filter()
+#3 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiApps\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiApps\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#6 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiApps\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiApps\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(282): ProjectController->run()
+#10 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiApps\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\mobarat\index.php(27): CWebApplication->run()
+REQUEST_URI=/mobarat/index.php/Project/projectsjudgebody
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (841)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 08:17:39 [error] [php] Undefined index: category (C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php:841)
+Stack trace:
+#0 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#1 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilterChain.php(130): ProjectFilter->filter()
+#3 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\xampp\htdocs\YiiApps\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\xampp\htdocs\YiiApps\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#6 C:\xampp\htdocs\YiiApps\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\xampp\htdocs\YiiApps\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\xampp\htdocs\YiiApps\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#9 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(282): ProjectController->run()
+#10 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\YiiApps\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\mobarat\index.php(27): CWebApplication->run()
+REQUEST_URI=/mobarat/index.php/Project/projectsjudgebody
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (841)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 08:36:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.. The SQL statement executed was: SELECT project_judge.project_id,rated,grade,project_judge.judge_id,type_kernel,type_enable FROM project_judge
+                    inner join project on project.project_id=project_judge.project_id
+                    inner join judge_type on project_judge.judge_id=judge_type.judge_id and project.project_type= judge_type.project_type
+                    where rated=1 and project_judge.project_id=11572.
+in C:\xampp\htdocs\mobarat\protected\models\Project.php (195)
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (935)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 08:36:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.. The SQL statement executed was: SELECT project_judge.project_id,rated,grade,project_judge.judge_id,type_kernel,type_enable FROM project_judge
+                    inner join project on project.project_id=project_judge.project_id
+                    inner join judge_type on project_judge.judge_id=judge_type.judge_id and project.project_type= judge_type.project_type
+                    where rated=1 and project_judge.project_id=11576.
+in C:\xampp\htdocs\mobarat\protected\models\Project.php (195)
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (935)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 08:36:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.. The SQL statement executed was: SELECT project_judge.project_id,rated,grade,project_judge.judge_id,type_kernel,type_enable FROM project_judge
+                    inner join project on project.project_id=project_judge.project_id
+                    inner join judge_type on project_judge.judge_id=judge_type.judge_id and project.project_type= judge_type.project_type
+                    where rated=1 and project_judge.project_id=11580.
+in C:\xampp\htdocs\mobarat\protected\models\Project.php (195)
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (935)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 08:36:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.. The SQL statement executed was: SELECT project_judge.project_id,rated,grade,project_judge.judge_id,type_kernel,type_enable FROM project_judge
+                    inner join project on project.project_id=project_judge.project_id
+                    inner join judge_type on project_judge.judge_id=judge_type.judge_id and project.project_type= judge_type.project_type
+                    where rated=1 and project_judge.project_id=11579.
+in C:\xampp\htdocs\mobarat\protected\models\Project.php (195)
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (935)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 08:36:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.. The SQL statement executed was: SELECT project_judge.project_id,rated,grade,project_judge.judge_id,type_kernel,type_enable FROM project_judge
+                    inner join project on project.project_id=project_judge.project_id
+                    inner join judge_type on project_judge.judge_id=judge_type.judge_id and project.project_type= judge_type.project_type
+                    where rated=1 and project_judge.project_id=11573.
+in C:\xampp\htdocs\mobarat\protected\models\Project.php (195)
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (935)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 09:01:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.. The SQL statement executed was: SELECT project_judge.project_id,rated,grade,project_judge.judge_id,type_kernel,type_enable FROM project_judge
+                    inner join project on project.project_id=project_judge.project_id
+                    inner join judge_type on project_judge.judge_id=judge_type.judge_id and project.project_type= judge_type.project_type
+                    where rated=1 and project_judge.project_id=11572.
+in C:\xampp\htdocs\mobarat\protected\models\Project.php (195)
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (935)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/10 09:01:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY000]: General error: 2014 Cannot execute queries while other unbuffered queries are active.  Consider using PDOStatement::fetchAll().  Alternatively, if your code is only ever going to run against mysql, you may enable query buffering by setting the PDO::MYSQL_ATTR_USE_BUFFERED_QUERY attribute.. The SQL statement executed was: SELECT project_judge.project_id,rated,grade,project_judge.judge_id,type_kernel,type_enable FROM project_judge
+                    inner join project on project.project_id=project_judge.project_id
+                    inner join judge_type on project_judge.judge_id=judge_type.judge_id and project.project_type= judge_type.project_type
+                    where rated=1 and project_judge.project_id=11573.
+in C:\xampp\htdocs\mobarat\protected\models\Project.php (195)
+in C:\xampp\htdocs\mobarat\protected\controllers\ProjectController.php (935)
+in C:\xampp\htdocs\mobarat\index.php (27)

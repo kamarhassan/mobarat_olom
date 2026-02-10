@@ -836,10 +836,23 @@ ifnull((select  (select code_name from codes where code_kind =121 and code_no=po
         //echo "asdadsasdas";return;
         $current=  Mobarat::getOpenMobaratRecord();
         
+        $category = isset($_POST['category']) && $_POST['category'] != '' ? $_POST['category'] : '';
+        $stage = isset($_POST['stage']) && $_POST['stage'] != '' ? $_POST['stage'] : '';
+        
         $where=" where project.mobarat_year=" .$current['mobarat_year']
-                ." and mobarat_school.is_present=1 and school_name like '%".$_POST['school']."%' and project_name like '%".$_POST['pname']."%'"
-               // ." and ((select judge_stage from person_judge where judge_id=".$_POST['judge_id'].")='03' or  project_stage =(select judge_stage from person_judge where judge_id=".$_POST['judge_id']."))"
-                ." and not project.project_id in (select project_judge.project_id from project_judge 
+                ." and mobarat_school.is_present=1 and school_name like '%".$_POST['school']."%' and project_name like '%".$_POST['pname']."%'";
+        
+        // Add category filter if selected
+        if($category != ''){
+            $where .= " and project_type = '".$category."'";
+        }
+        
+        // Add stage filter if filled
+        if($stage != ''){
+            $where .= " and project_stage = '".$stage."'";
+        }
+        
+        $where .= " and not project.project_id in (select project_judge.project_id from project_judge 
                                             where project_judge.judge_id=".$_POST['judge_id']." and project_judge.project_id=project.project_id and rated=1) ";
         if($current['enablejudgeday']==1){
             $where.=" and date_day='" .$current['enablejudgedaycode_no']."'";
