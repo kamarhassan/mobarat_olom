@@ -312,7 +312,7 @@ class MobaratSchool extends CActiveRecord
                return 0;
         }
         
-        public function getCoutingConfirmedSchoolNew($my){
+        public static function getCoutingConfirmedSchoolNew($my){
             $query= "select count(sn.school_id) as co from mobarat_school as sn "
                     ." where not (sn.school_id in (select so.school_id from mobarat_school as so where so.mobarat_school_RegistrationStep='04' and so.mobarat_year=".($my-1).")) "
                     ." and   sn.mobarat_school_RegistrationStep='04' and sn.mobarat_year=".$my." ;";
@@ -323,7 +323,7 @@ class MobaratSchool extends CActiveRecord
                return 0;
         }
         
-        public function getCoutingConfirmedSchoolNewPure($my){
+        public static function getCoutingConfirmedSchoolNewPure($my){
             $query= "select count(sn.school_id) as co from mobarat_school as sn "
                     ." where not (sn.school_id in (select so.school_id from mobarat_school as so where so.mobarat_school_RegistrationStep='04' and so.mobarat_year!=".($my).")) "
                     ." and   sn.mobarat_school_RegistrationStep='04' and sn.mobarat_year=".$my." ;";
@@ -334,7 +334,7 @@ class MobaratSchool extends CActiveRecord
                return 0;
         }
         
-        public function getCoutingConfirmedSchoolOld($my){
+        public static function getCoutingConfirmedSchoolOld($my){
             $query= "select count(sn.school_id) as co from mobarat_school as sn "
                     ." where (sn.school_id in (select so.school_id from mobarat_school as so where so.mobarat_school_RegistrationStep='04' and so.mobarat_year<".($my).")) "
                     ." and   sn.mobarat_school_RegistrationStep='04' and sn.mobarat_year=".$my." ;";

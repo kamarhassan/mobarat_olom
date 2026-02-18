@@ -148,7 +148,7 @@ class Project extends CActiveRecord
             return Project::model()->count('mobarat_year=' . $my);
         }
         
-        public function projectStats($my){
+        public static function projectStats($my){
             $query= "select (select count(project_type) from project where code_no=project_type and mobarat_year=".$my.")  as co"
                     . ",code_name as tname from codes where code_kind=111";
                     
