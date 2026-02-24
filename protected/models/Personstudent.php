@@ -33,7 +33,7 @@ class Personstudent extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('student_personid, mobarat_year', 'required'),
+			array('student_personid, mobarat_year, student_class', 'required'),
 			array('student_personid, mobarat_year, student_CanModifyProject, student_oldID', 'numerical', 'integerOnly'=>true),
 			array('student_class', 'length', 'max'=>2),
                         array('date_inserted','default','value'=>new CDbExpression('now()'),'setOnEmpty'=>false,'on'=>'insert'),

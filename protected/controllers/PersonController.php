@@ -137,7 +137,7 @@ class PersonController extends Controller
                     $std=  Personstudent::model()->find('mobarat_year='.$current['mobarat_year'].' and student_personid ='.$id);
                     if($std!=null){
                         $param['std']=$std;
-                        $param['title']='معلومات الطالب';
+                       $param['title']='معلومات الطالب'; 
                         $param['enmPersonType']= enm_PersonType::STUDENT;
                     }
                     else{

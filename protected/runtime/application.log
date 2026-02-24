@@ -555,3 +555,36 @@ Stack trace:
 REQUEST_URI=/mobarat/index.php/Statistics/ProjectTypeStat?_=1771410828142
 in C:\xampp\htdocs\mobarat\protected\controllers\StatisticsController.php (81)
 in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/23 11:56:39 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\mobarat\protected\controllers\ParticipantController.php:81)
+Stack trace:
+#0 C:\xampp\htdocs\YiiApps\framework\web\CController.php(286): ParticipantController->runAction()
+#1 C:\xampp\htdocs\YiiApps\framework\web\CController.php(265): ParticipantController->runActionWithFilters()
+#2 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(282): ParticipantController->run()
+#3 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\YiiApps\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\mobarat\index.php(27): CWebApplication->run()
+REQUEST_URI=/mobarat/index.php/Participant/index
+in C:\xampp\htdocs\mobarat\protected\controllers\ParticipantController.php (81)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/23 11:56:41 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\mobarat\protected\controllers\ParticipantController.php:81)
+Stack trace:
+#0 C:\xampp\htdocs\YiiApps\framework\web\CController.php(286): ParticipantController->runAction()
+#1 C:\xampp\htdocs\YiiApps\framework\web\CController.php(265): ParticipantController->runActionWithFilters()
+#2 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(282): ParticipantController->run()
+#3 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\YiiApps\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\mobarat\index.php(27): CWebApplication->run()
+REQUEST_URI=/mobarat/index.php/Participant/index
+in C:\xampp\htdocs\mobarat\protected\controllers\ParticipantController.php (81)
+in C:\xampp\htdocs\mobarat\index.php (27)
+2026/02/23 11:56:42 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\mobarat\protected\controllers\ParticipantController.php:81)
+Stack trace:
+#0 C:\xampp\htdocs\YiiApps\framework\web\CController.php(286): ParticipantController->runAction()
+#1 C:\xampp\htdocs\YiiApps\framework\web\CController.php(265): ParticipantController->runActionWithFilters()
+#2 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(282): ParticipantController->run()
+#3 C:\xampp\htdocs\YiiApps\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\YiiApps\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\mobarat\index.php(27): CWebApplication->run()
+REQUEST_URI=/mobarat/index.php/Participant/index
+in C:\xampp\htdocs\mobarat\protected\controllers\ParticipantController.php (81)
+in C:\xampp\htdocs\mobarat\index.php (27)

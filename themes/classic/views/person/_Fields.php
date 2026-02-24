@@ -543,7 +543,14 @@ $cs->registerScriptFile($myScript, CClientScript::POS_HEAD);
 
                             $list = CHtml::listData($records, 'code_no', 'code_name');
 
-                            echo $form->dropDownList($std, $strIndex.$attr, $list, array('id'=>'cb'.$attr,'empty' => 'إختر','class' => 'form-control'.$ss));//, 'class' => 'list_small'));
+                            echo $form->dropDownList($std, $strIndex.$attr, $list, array(
+                                'id'=>'cb'.$attr,
+                                'empty' => 'إختر',
+                                'class' => 'form-control '. $ss,
+                                'required' => true,
+                                'data-rule-required' => 'true',
+                                'aria-required' => 'true',
+                            ));//, 'class' => 'list_small'));
 
                             //echo $form->textField($std, $attr, array('id'=>'txt'.$attr,'class' => 'form-control ' . $ss, 'placeholder' => $oteach->getAttributeLabel($attr), 'size' => 60, 'maxlength' => 100,'style'=> $ss)); 
 

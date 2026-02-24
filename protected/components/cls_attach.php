@@ -192,4 +192,15 @@ class cls_attach {
         }
         return $uploadOk;
     }
+
+    /**
+     * Backwards-compatible wrapper for the correctly named method.
+     * Older code calls validateAndUploadFile(), but the implementation
+     * was saved as validateAndUploadFiledUploadFile (typo). Forward
+     * calls here to keep compatibility.
+     */
+    public static function validateAndUploadFile($model,$image,$FILES,$strCtrFileName,$strFieldName,$strSaveToPathWithoutExt,$strSaveToFileWithOutExt,$bolPictue=false,$bolRequired=false,$bolTestForSize=false,$intSizeKB=  cls_attach::Picture_Size)
+    {
+        return self::validateAndUploadFiledUploadFile($model,$image,$FILES,$strCtrFileName,$strFieldName,$strSaveToPathWithoutExt,$strSaveToFileWithOutExt,$bolPictue,$bolRequired,$bolTestForSize,$intSizeKB);
+    }
 }
